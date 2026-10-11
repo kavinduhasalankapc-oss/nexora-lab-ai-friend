@@ -1,0 +1,17 @@
+NEXORA LAB — නොමිලේ Cloud APK Build (Android Studio අවශ්‍ය නැහැ)
+
+1. GitHub account එකක් හදාගෙන https://github.com/new වෙත යන්න.
+2. Repository name: nexora-lab-ai-friend. Public හෝ Private තෝරන්න. Create repository ඔබන්න.
+3. මේ ZIP එක PC එකට download කර Extract කරන්න. ඇතුළේ nexora folder එක විවෘත කරන්න.
+4. GitHub repository එකේ Add file > Upload files තෝරන්න. nexora folder එක ඇතුළේ ඇති සියලුම files සහ folders ( .github ඇතුළුව) browser එකට drag-and-drop කරන්න. ZIP file එක පමණක් upload කරන්න එපා.
+5. Commit changes ඔබන්න.
+6. Repository එකේ Actions tab එකට යන්න. “Build NEXORA LAB APK” workflow එක තෝරන්න. “Run workflow” පෙනේ නම් එය ඔබන්න. Push එකෙන් දැනටමත් build එකක් පටන්ගෙන තිබිය හැක.
+7. Workflow එකට කොළ පාට tick එකක් ලැබුණු පසු run එක විවෘත කර Artifacts යටතේ NEXORA-LAB-APK download කරන්න.
+8. ZIP artifact එක extract කළාම app-release.apk ලැබේ. එය Android phone එකට යවා install කරන්න. Phone එකේ “Install unknown apps” අවසරය අවශ්‍ය විය හැක.
+
+වැදගත්:
+- මෙය cloud build workflow එකයි; build එක සාර්ථකද කියා GitHub Actions result එකෙන් තහවුරු කරන්න.
+- APK එක compile වුණා කියලා AI replies වැඩ කරනවා කියන එක නොවේ. AI/Web answers සඳහා backend එක HTTPS hosting එකකට deploy කරලා GitHub repository Settings > Secrets and variables > Actions > Variables තුළ NEXORA_API_URL නමින් variable එකක් add කර එයට backend HTTPS base URL එක දෙන්න. උදා: https://your-service.example.com (අගට /api/chat දාන්න එපා).
+- GEMINI_API_KEY එක GitHub variable එකකට හෝ Flutter app එකට දාන්න එපා. එය backend hosting provider එකේ private environment variable/secret එකක් ලෙස පමණක් තබන්න.
+- Backend එක සකස් කර නැත්නම් app එක open විය හැකි නමුත් AI response request එක fail වෙයි.
+- GitHub Actions usage limits සහ hosting/API free-tier limits වෙනස් විය හැක.

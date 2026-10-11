@@ -1,0 +1,9 @@
+Android microphone permission
+
+Open android/app/src/main/AndroidManifest.xml and add these lines above <application>:
+
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+
+Speech recognition availability and Sinhala locale support depend on the Android device and installed speech services.
+The starter app uses Android speech recognition and the phone's TTS engine. These may require network access and are NOT guaranteed to work offline.
